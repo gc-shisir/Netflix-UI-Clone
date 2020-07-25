@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  --primary-color: #e50914;
+  --background-color: #000000;
+  --light-background-color: #222222;
+  --text-color: #fff;
+  --questions-background-color: #303030;
+  --footer-text-color:#667571;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: sans-serif;
+  z-index: -1;
+}
+
+/* Utility classes */
+h1 {
+  font-size: 3.1rem;
+}
+
+.section-p {
+  margin: 14px 0;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+button {
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer !important ;
+  z-index: 10;
+}
+
+hr {
+  width: 100vw;
+  height: 10px;
+  background: var(--light-background-color);
+  border: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+a{
+  text-decoration: none;
+  color:var(--footer-text-color);
+}
+
+.angle-icon{
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+/* showcase-section */
+#showcase-section {
+  height: 110vh;
+  width: 100vw;
+  position: relative;
+  background: url("../img/netflix1.jpg") no-repeat center center/cover;
+  z-index: -1;
+}
+
+.showcase-section-bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px -100px 100px rgba(0, 0, 0, 0.7),
+    inset 0px 100px 100px rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.showcase-section-bg::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: inset -100px 0px 100px rgba(0, 0, 0, 0.7),
+    inset 100px px 100px rgba(0, 0, 0, 0.7);
+}
+
+.nav {
+  max-width: 100vw;
+  height: 4rem;
+}
+
+.nav .nav-brand {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand img {
+  height: 35px;
+  width: 140px;
+  margin-left: 55px;
+  margin-top: 20px;
+}
+
+.nav-brand button {
+  margin-right: 45px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  border: 1px solid var(--background-color);
+  border-radius: 5px;
+  padding: 8px 18px;
+  margin-right: 55px;
+  margin-top: 20px;
+}
+
+.showcase-body {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-body h1 {
+  font-size: 3.1rem;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 30px;
+  padding: 0.5rem;
+}
+.showcase-body p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 18px;
+  padding: 0 10px;
+}
+
+.showcase-body form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.showcase-body form input {
+  flex: 2;
+  height: 50px;
+  padding: 0 10px;
+  font-size: 18px;
+}
+.showcase-body form button {
+  flex: 1;  
+  height: 50px;
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.showcase-body p.bottom {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 18px;
+  padding: 0 12px;
+}
+
+/* TV section */
+#tv-section {
+  height: auto;
+  width: 100vw;
+  padding: 30px 0;
+}
+
+#tv-section .row {
+  height: 100%;
+  width: 100%;
+}
+
+#tv-section .col {
+  width: 50%;
+  height: 100%;
+}
+
+.col-items {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tv-img {
+  width: 540px;
+  height: 400px;
+}
+
+/* download-section */
+#download-section {
+  height: auto;
+  width: 100vw;
+  padding: 30px 0;
+}
+
+#download-section .row {
+  height: 100%;
+  width: 100%;
+}
+
+#download-section .col {
+  width: 50%;
+  height: 100%;
+}
+
+.mobile-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Watch section */
+#watch-section {
+  height: 100%;
+  width: 100vw;
+  padding: 30px 0;
+}
+
+#watch-section .row {
+  height: 100%;
+  width: 100%;
+}
+
+#watch-section .col {
+  width: 50%;
+  height: 100%;
+}
+
+.watch-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Questions section */
+#questions-section {
+  height: 100%;
+  width: 100vw;
+  padding: 30px 0;
+}
+
+#question-section p {
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+#questions-section h1 {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.questions-container {
+  max-width: 840px;
+  margin: 52px auto;
+}
+
+.question-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 0 8px 0;
+}
+
+.question-wrapper .question {
+  width: 100%;
+  padding: 18px 28px;
+  background: var(--questions-background-color);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.question-wrapper .answer {
+  width: 100%;
+  padding: 18px 28px;
+  background: var(--questions-background-color);
+  margin-top: 1px;
+}
+
+.answer p {
+  margin: 20px 0px;
+}
+
+.question-wrapper i{
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.form-container {
+  max-width: 700px;
+  margin: 0px auto;
+}
+
+#questions-section form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#questions-section form input {
+  flex: 2;
+  height: 50px;
+  padding: 0 10px;
+  font-size: 18px;
+}
+
+#questions-section form button {
+  flex: 1;
+  height: 50px;
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+#questions-section p.bottom {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 18px;
+  padding: 0 12px;
+}
+
+
+/* Footer section */
+#footer-section{
+  height: auto;
+  width: 100vw;
+}
+
+.footer-container{
+  max-width: 900px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+footer p{
+  font-size:16px;
+  font-weight: 400;
+  margin: 40px 0 30px 0 ;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+ul{
+  margin-bottom: 18px;
+}
+
+footer li{
+  font-size: 13px;
+  font-weight: 400;
+  list-style: none;
+  margin: 15px 0;
+}
+
+footer a:hover{
+  text-decoration: underline;
+  text-decoration-color: var(--footer-text-color);
+}
+
